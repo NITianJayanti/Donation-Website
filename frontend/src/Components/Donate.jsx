@@ -1,0 +1,58 @@
+import React, { useState } from "react";
+
+const Donate = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [amount, setAmount] = useState("");
+  const [disableBtn, setDisableBtn] = useState(false);
+
+  const handleCheckout = async (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <section className="donate">
+      <form onSubmit={handleCheckout}>
+        <div className="">
+          <img src="/logo.png" alt="logo" />
+        </div>
+        <div className="">
+          <label>Please Help the needy </label>
+          <input
+            type="number"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            placeholder="Enter Donation Amount (USD)"
+          />
+        </div>
+
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Your Name"
+        />
+
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email Address"
+        />
+        <input
+          type="text"
+          placeholder="Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+
+        <button type="submit" className="btn" disabled={disableBtn}>
+          Donate{amount ? `$${amount}` : "$0"}
+        </button>
+      </form>
+    </section>
+  );
+};
+
+export default Donate;
