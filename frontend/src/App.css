@@ -11,7 +11,7 @@
 }
 
 .btn {
-  background: #facc15;
+  background: #187245;
   color: #fff;
   width: 100%;
   border: none;
@@ -98,7 +98,7 @@
 }
 
 .about .our_progress .card:hover {
-  background: #facc15;
+  background: #108055;
   transition: 0.3s;
 }
 
@@ -233,7 +233,7 @@
 
 .contact .banner .wrapper p span {
   display: flex;
-  background: #facc15;
+  background: #12a844;
   padding: 12px;
   border-radius: 100%;
 }
@@ -457,7 +457,7 @@ footer div ul a span {
 }
 
 .navbar .links ul li a:hover {
-  color: #facc15;
+  color: #0eaa35a1;
   transition: 0.3s;
 }
 
@@ -467,12 +467,12 @@ footer div ul a span {
 
 .navbar .links ul:last-child li {
   padding: 8px;
-  border: 2px solid #facc15;
+  border: 2px solid #046e318c;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  background: #facc15;
+  background: #037e09;
   transition: 0.3s;
 }
 
@@ -482,7 +482,7 @@ footer div ul a span {
 }
 
 .navbar .links ul:last-child li:hover svg {
-  color: #facc15;
+  color: #584806a4;
   transition: 0.3s;
 }
 
@@ -570,7 +570,7 @@ footer div ul a span {
 
 .notfound .content p {
   font-size: 18px;
-  color: #111;
+  color: #860f0f;
 }
 
 .notfound .content .btn {
@@ -634,7 +634,7 @@ footer div ul a span {
 }
 
 .members .container .heading_section h2 {
-  color: #111;
+  color: #5c0404;
   font-size: 32px;
   font-weight: 600;
 }

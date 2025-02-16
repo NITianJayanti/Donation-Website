@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Donate = () => {
   const [name, setName] = useState("");
@@ -9,6 +10,32 @@ const Donate = () => {
 
   const handleCheckout = async (e) => {
     e.preventDefault();
+    try {
+      setDisableBtn(true);
+      await axios
+        .post(
+          "http://localhost:4000/api/v1/checkout",
+          {
+            name,
+            email,
+            message,
+            amount,
+          },
+          {
+            withCredentials: true,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          console.log(res.data);
+          window.location.href = res.data.result.url;
+        });
+    } catch (error) {
+      setDisableBtn(false);
+      console.error(error);
+    }
   };
 
   return (
